@@ -10,19 +10,14 @@
 
   <meta
     name="description"
-    content="CHANDAN — Maison de Parfum. A cinematic journey through the art of fragrance."
-  />
-
-  <meta
-    name="theme-color"
-    content="#EFE4D3"
+    content="CHANDAN — Maison de Parfum. The art of leaving a trace."
   />
 
   <title>CHANDAN — Maison de Parfum</title>
 
-  <!-- Luxury typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Luxury fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
@@ -31,34 +26,10 @@
 
   <style>
     :root {
-      --brand-bg: #efe4d3;
-      --brand-ink: #211b18;
-      --brand-soft: #75675c;
-      --brand-gold: #b88948;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      background: var(--brand-bg);
-      color: var(--brand-ink);
-      overflow-x: hidden;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    /* Engine theme override */
-    #world {
-      --sw-bg: #efe4d3;
-      --sw-ink: #211b18;
-      --sw-ink-soft: #75675c;
-      --sw-accent: #b88948;
+      --sw-bg: #F5EDE0;
+      --sw-ink: #241d2b;
+      --sw-ink-soft: #6a6072;
+      --sw-accent: #9B8CB8;
 
       --sw-font-display:
         "Cormorant Garamond",
@@ -67,88 +38,39 @@
 
       --sw-font-body:
         "Inter",
-        Arial,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
         sans-serif;
-    }
-
-    /* Slightly more premium page feel */
-    .brand-intro {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 2;
-    }
-
-    /* Optional bottom copyright */
-    .copyright {
-      position: fixed;
-      left: 22px;
-      bottom: 18px;
-      z-index: 45;
-
-      font-family: "Inter", sans-serif;
-      font-size: 10px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-
-      color: rgba(33, 27, 24, 0.48);
-      pointer-events: none;
-    }
-
-    @media (max-width: 860px) {
-      .copyright {
-        left: 18px;
-        bottom: 12px;
-        font-size: 9px;
-      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Main cinematic experience -->
+  <!-- Main website -->
   <div id="world"></div>
 
-  <!-- Small brand footer -->
-  <div class="copyright">
-    © 2026 CHANDAN — MAISON DE PARFUM
-  </div>
-
-  <!-- Your existing scroll engine -->
+  <!-- IMPORTANT:
+       Keep scrub-engine.js exactly as it is -->
   <script src="scrub-engine.js"></script>
 
   <script>
-    /*
-      ============================================================
-      CHANDAN — MAISON DE PARFUM
-      Cinematic perfume website configuration
-      ============================================================
-    */
-
     mountLetsScroll(document.getElementById("world"), {
 
-      /* --------------------------------------------------------
+      /* =====================================================
          BRAND
-      -------------------------------------------------------- */
+         ===================================================== */
 
       brand: {
         name: "CHANDAN",
         href: "#top"
       },
 
-      /* --------------------------------------------------------
-         TOP CTA
-      -------------------------------------------------------- */
-
       cta: {
         label: "Discover Nº 1",
-        href: "#"
+        href: "#finale"
       },
-
-      /* --------------------------------------------------------
-         EXPERIENCE SETTINGS
-      -------------------------------------------------------- */
 
       hint: "scroll to enter the world of CHANDAN",
 
@@ -156,24 +78,30 @@
 
       atmosphere: true,
 
-      diveScroll: 1.45,
+
+      /* =====================================================
+         IMPORTANT ENGINE SETTINGS
+         ORIGINAL-STYLE SETTINGS
+         ===================================================== */
+
+      diveScroll: 1.3,
 
       connScroll: 0.9,
 
-      crossfade: 0.10,
+      crossfade: 0.08,
 
       connectors: [],
 
 
-      /* ========================================================
-         PERFUME SECTIONS
-         ======================================================== */
+      /* =====================================================
+         PERFUME JOURNEY
+         ===================================================== */
 
       sections: [
 
-        /* ======================================================
+        /* -------------------------------------------------
            01 — THE HARVEST
-        ====================================================== */
+           ------------------------------------------------- */
 
         {
           id: "harvest",
@@ -184,30 +112,30 @@
 
           clip: "harvest.mp4",
 
-          accent: "#8E7B68",
+          accent: "#9B8CB8",
 
-          scroll: 1.5,
+          scroll: 1.4,
 
-          linger: 0.25,
+          linger: 0.3,
 
-          eyebrow: "01 · THE ORIGIN",
+          eyebrow: "THE ORIGIN",
 
           title: "Where every scent begins.",
 
           body:
-            "From sun-warmed botanicals to carefully chosen raw materials, CHANDAN begins with nature. Every ingredient is selected for the character it brings to the final composition.",
+            "Every CHANDAN fragrance begins with carefully selected ingredients, inspired by nature and refined with intention.",
 
           tags: [
-            "Natural Ingredients",
             "Rare Botanicals",
-            "Carefully Selected"
+            "Natural Ingredients",
+            "Pure Essence"
           ]
         },
 
 
-        /* ======================================================
+        /* -------------------------------------------------
            02 — THE ATELIER
-        ====================================================== */
+           ------------------------------------------------- */
 
         {
           id: "atelier",
@@ -218,30 +146,30 @@
 
           clip: "atelier.mp4",
 
-          accent: "#A96F48",
+          accent: "#B0703C",
 
-          scroll: 1.55,
+          scroll: 1.4,
 
-          linger: 0.35,
+          linger: 0,
 
-          eyebrow: "02 · THE CRAFT",
+          eyebrow: "THE CRAFT",
 
-          title: "Composed with intention.",
+          title: "The art of composition.",
 
           body:
-            "Inside the atelier, contrasting notes become harmony. Floral, woody, warm and luminous accords are blended with patience to create a fragrance that feels distinctly CHANDAN.",
+            "Inside the atelier, precious notes are carefully blended into balanced compositions that reveal depth, warmth and character.",
 
           tags: [
-            "Masterfully Blended",
-            "Modern Composition",
-            "Fine Perfumery"
+            "Fine Perfumery",
+            "Masterful Blending",
+            "Signature Notes"
           ]
         },
 
 
-        /* ======================================================
+        /* -------------------------------------------------
            03 — THE BOUTIQUE
-        ====================================================== */
+           ------------------------------------------------- */
 
         {
           id: "boutique",
@@ -252,30 +180,30 @@
 
           clip: "boutique.mp4",
 
-          accent: "#C39A55",
+          accent: "#D4AF6A",
 
-          scroll: 1.55,
+          scroll: 1.4,
 
-          linger: 0.30,
+          linger: 0,
 
-          eyebrow: "03 · THE EXPERIENCE",
+          eyebrow: "THE EXPERIENCE",
 
-          title: "Luxury, held in every detail.",
+          title: "Luxury in every detail.",
 
           body:
-            "A fragrance is more than a bottle. It is an atmosphere, a memory and a quiet statement. CHANDAN brings together refined design and olfactory character for a complete sensory experience.",
+            "From the first impression to the final touch, every detail is designed to make fragrance feel personal, refined and unforgettable.",
 
           tags: [
+            "Luxury Design",
             "Signature Bottle",
-            "Refined Design",
-            "Luxury Experience"
+            "Timeless Elegance"
           ]
         },
 
 
-        /* ======================================================
+        /* -------------------------------------------------
            04 — CHANDAN Nº 1
-        ====================================================== */
+           ------------------------------------------------- */
 
         {
           id: "finale",
@@ -286,23 +214,23 @@
 
           clip: "finale.mp4",
 
-          accent: "#B97832",
+          accent: "#C9892F",
 
-          scroll: 1.8,
+          scroll: 1.7,
 
           linger: 0.45,
 
-          eyebrow: "04 · THE SIGNATURE",
+          eyebrow: "THE SIGNATURE",
 
           title: "CHANDAN Nº 1",
 
           body:
-            "A signature expression of the Maison — warm, elegant and unforgettable. Created for those who leave a trace without saying a word.",
+            "A signature fragrance created to leave a quiet, unforgettable trace. Warm, elegant and unmistakably CHANDAN.",
 
           tags: [
             "Signature Fragrance",
-            "Long-Lasting Character",
-            "CHANDAN"
+            "Elegant",
+            "Unforgettable"
           ],
 
           cta: {
@@ -312,7 +240,7 @@
             },
 
             secondary: {
-              label: "Enter the Maison",
+              label: "The Maison",
               href: "#"
             }
           }
